@@ -1,4 +1,4 @@
-
+import java.util.ArrayList;
 public class HelloWorld{
 	
     public HelloWorld(){
@@ -12,7 +12,21 @@ public class HelloWorld{
         System.out.println("t".equals("a"));
 	}
     
-    public void doSomething(){
+    public String[] doSomething() throws JSONException{
+        JSONObject object = new JSONObject("{\"DefaultPapers\":[\"DK0010274414\", \"DK11111111\"]}");
+        
+        
+        
+        
+		JSONArray defPapers = object.getJSONArray("DefaultPapers");
+
+        String[] defs = new String[defPapers.length()];
+		if (defPapers != null) {
+			for (int i = 0; i < defPapers.length(); i ++) {
+                defs[i]= defPapers.get(i).toString();
+            }
+		}
+        return defs;
         
     }
 
