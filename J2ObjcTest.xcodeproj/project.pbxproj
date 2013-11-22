@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		24E522F1183F5040002A0CD6 /* HelloWorld.java in Sources */ = {isa = PBXBuildFile; fileRef = 24E522F0183F5040002A0CD6 /* HelloWorld.java */; };
+		24EE1C8A183F63D000AEAD40 /* JSONObject.java in Sources */ = {isa = PBXBuildFile; fileRef = 24EE1C89183F63D000AEAD40 /* JSONObject.java */; };
 		24FB514E183EA76800BA878C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24FB514D183EA76800BA878C /* Foundation.framework */; };
 		24FB5150183EA76800BA878C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24FB514F183EA76800BA878C /* CoreGraphics.framework */; };
 		24FB5152183EA76800BA878C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24FB5151183EA76800BA878C /* UIKit.framework */; };
@@ -36,7 +37,7 @@
 				"${DERIVED_FILES_DIR}/${INPUT_FILE_BASE}.h",
 				"${DERIVED_FILES_DIR}/${INPUT_FILE_BASE}.m",
 			);
-			script = "${PROJECT_DIR}/Pods/J2ObjC/dist/j2objc/j2objc -d ${DERIVED_FILES_DIR} -sourcepath ${PROJECT_DIR}/javasrc \\\n--no-package-directories ${INPUT_FILE_PATH};";
+			script = "${PROJECT_DIR}/Pods/J2ObjC/dist/j2objc/j2objc -d ${DERIVED_FILES_DIR} -sourcepath ${PROJECT_DIR}/J2ObjcTest/javasrc \\\n--no-package-directories ${INPUT_FILE_PATH};";
 		};
 /* End PBXBuildRule section */
 
@@ -52,6 +53,7 @@
 
 /* Begin PBXFileReference section */
 		24E522F0183F5040002A0CD6 /* HelloWorld.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = HelloWorld.java; sourceTree = "<group>"; };
+		24EE1C89183F63D000AEAD40 /* JSONObject.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = JSONObject.java; sourceTree = "<group>"; };
 		24FB514A183EA76800BA878C /* J2ObjcTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = J2ObjcTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24FB514D183EA76800BA878C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		24FB514F183EA76800BA878C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -104,6 +106,7 @@
 		24E522EF183F4F92002A0CD6 /* javasrc */ = {
 			isa = PBXGroup;
 			children = (
+				24EE1C89183F63D000AEAD40 /* JSONObject.java */,
 				24E522F0183F5040002A0CD6 /* HelloWorld.java */,
 			);
 			path = javasrc;
@@ -323,6 +326,7 @@
 				24FB5167183EA76800BA878C /* ViewController.m in Sources */,
 				24FB515E183EA76800BA878C /* AppDelegate.m in Sources */,
 				24FB515A183EA76800BA878C /* main.m in Sources */,
+				24EE1C8A183F63D000AEAD40 /* JSONObject.java in Sources */,
 				24E522F1183F5040002A0CD6 /* HelloWorld.java in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
