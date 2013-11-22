@@ -1,0 +1,12 @@
+PODS:
+  - J2ObjC (0.8.6.1):
+    - J2ObjC/lib/jre
+  - J2ObjC/lib/jre (0.8.6.1)
+
+DEPENDENCIES:
+  - J2ObjC
+
+SPEC CHECKSUMS:
+  J2ObjC: bea4c24af35100985485c173958f1189aa0f0f6b
+
+COCOAPODS: 0.25.0
