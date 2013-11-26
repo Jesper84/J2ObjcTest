@@ -11,16 +11,16 @@
 @implementation AbstractConnection
 
 - (JSONObject *)doGetWithNSString:(NSString *)url {
-  return [((AbstractConnection *) nil_chk(impl_)) doGetWithNSString:url];
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
+    NSData *response = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
+    NSString *jsonString = [[NSString alloc] initWithData:response encoding:NSUTF8StringEncoding];
+    JSONObject *jsonObject = [[JSONObject alloc] initWithNSString:jsonString];
+    return jsonObject;
 }
 
 - (JSONObject *)doPostWithNSString:(NSString *)url
                       withNSString:(NSString *)body {
-  return [((AbstractConnection *) nil_chk(impl_)) doPostWithNSString:url withNSString:body];
-}
-
-- (void)setImplWithAbstractConnection:(AbstractConnection *)impl {
-  self->impl_ = impl;
+    return nil;
 }
 
 - (id)init {
@@ -29,7 +29,6 @@
 
 - (void)copyAllFieldsTo:(AbstractConnection *)other {
   [super copyAllFieldsTo:other];
-  other->impl_ = impl_;
 }
 
 @end

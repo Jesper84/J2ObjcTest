@@ -12,19 +12,13 @@
 
 #import "JreEmulation.h"
 
-@interface AbstractConnection : NSObject {
- @public
-  AbstractConnection *impl_;
-}
+@interface AbstractConnection : NSObject 
 
 - (JSONObject *)doGetWithNSString:(NSString *)url;
 - (JSONObject *)doPostWithNSString:(NSString *)url
                       withNSString:(NSString *)body;
-- (void)setImplWithAbstractConnection:(AbstractConnection *)impl;
 - (id)init;
 - (void)copyAllFieldsTo:(AbstractConnection *)other;
 @end
-
-J2OBJC_FIELD_SETTER(AbstractConnection, impl_, AbstractConnection *)
 
 #endif // _AbstractConnection_H_

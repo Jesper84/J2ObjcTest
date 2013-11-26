@@ -11,6 +11,7 @@
 #import "JSONObject.h"
 #import "ServerSettings.h"
 #import "JSONArray.h"
+#import "JSONTest.h"
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -27,9 +28,12 @@
     
 //    [settings getDefaultPapers];
     
-    HelloWorld *world = [[HelloWorld alloc]init];
+/*    HelloWorld *world = [[HelloWorld alloc]init];
     IOSObjectArray *array = [world doSomething];
-    NSLog(@"%@",  [array objectAtIndex:1]);
+    NSLog(@"%@",  [array objectAtIndex:1]);*/
+    JSONTest *test = [[JSONTest alloc] init];
+    NSLog(@"Date: %@",[test getDate]);
+    
     
     return YES;
 }

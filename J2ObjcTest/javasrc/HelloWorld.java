@@ -5,11 +5,13 @@ public class HelloWorld{
         
     }
     
-	public void sayHello(){
-        String test = "Dette er en meget lang streng";
+	public void getDate(){
+/*        String test = "Dette er en meget lang streng";
         System.out.println(test.substring(10));
         System.out.println(test.startsWith("F"));
-        System.out.println("t".equals("a"));
+        System.out.println("t".equals("a"));*/
+        AbstractConnection connection = new AbstractConnection();
+        connection.doGet("http://date.jsontest.com/");
 	}
     
     public String[] doSomething() throws JSONException{
